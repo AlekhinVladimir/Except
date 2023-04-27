@@ -5,9 +5,7 @@ import java.util.Scanner;
 public class Task3 {
     public static void main(String[] args) throws Exception {
         try {
-            String name = null;
-            System.out.println(name.length()); // NullPointerException
-
+            
             int a = 90;
             int b = 0;
             System.out.println(a / b); // ArithmeticException
@@ -23,8 +21,6 @@ public class Task3 {
             if (input.isEmpty()) {
                 throw new Exception("Пустые строки вводить нельзя!"); // Exception - ввод пустой строки
             }
-        } catch (NullPointerException ex) {
-            System.out.println("Указатель не может указывать на null!");
         } catch (ArithmeticException ex) {
             System.out.println("Делить на 0 нельзя!");
         } catch (IndexOutOfBoundsException ex) {
