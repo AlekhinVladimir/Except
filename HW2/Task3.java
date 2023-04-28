@@ -7,7 +7,7 @@ public class Task3 {
         try {
             
             int a = 90;
-            int b = 0;
+            int b = 3;
             System.out.println(a / b); // ArithmeticException
 
             printSum(23, 234);    //вывод на печать метода
@@ -23,7 +23,10 @@ public class Task3 {
             }
         } catch (ArithmeticException ex) {
             System.out.println("Делить на 0 нельзя!");
-        } catch (IndexOutOfBoundsException ex) {
+        } catch (NullPointerException ex) {
+            System.out.println("Указание на не существующий обьект");
+        }
+        catch (IndexOutOfBoundsException ex) {
             System.out.println("Массив выходит за пределы своего размера!");
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -32,9 +35,8 @@ public class Task3 {
         }
     }
 
-    public static void printSum(int a, int b) { // класс Integer не может быть использован в качестве аргумента метода
-                                                // println.
-        System.out.println(a + b); // привели к примитивному и выброс ошибки поиска файла тут ни к чему - убрал
+    public static void printSum(Integer a, Integer b) throws NullPointerException {
+        System.out.println(a + b); 
     }
 }
 
